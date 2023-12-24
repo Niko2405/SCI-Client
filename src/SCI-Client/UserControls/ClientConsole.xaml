@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="SCI_Client.UserControls.ServerConsole"
+﻿<UserControl x:Class="SCI_Client.UserControls.ClientConsole"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,14 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
 	<DockPanel LastChildFill="True">
-		<Label DockPanel.Dock="Top" Style="{StaticResource TitleStyle}">Server Console</Label>
+		<Label DockPanel.Dock="Top" Style="{StaticResource TitleStyle}">Client Console</Label>
 		<Grid DockPanel.Dock="Bottom" FocusManager.FocusedElement="{Binding ElementName=TextBox_Input}">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition></ColumnDefinition>
 				<ColumnDefinition Width="250"></ColumnDefinition>
 			</Grid.ColumnDefinitions>
 			<TextBox x:Name="TextBox_Input" Grid.Column="0" Style="{StaticResource TextBoxStyle}" FontFamily="{StaticResource OpenSansRegular}" Margin="50,15,50,15" Width="auto"></TextBox>
-			<Button x:Name="ButtonSend" Grid.Column="1" Style="{StaticResource ButtonStyle}" FontFamily="{StaticResource OpenSansBold}" HorizontalAlignment="Stretch" Margin="15,10,15,10" Click="ButtonSend_Click" ClickMode="Press">Send</Button>
+			<Button x:Name="ButtonSend" Grid.Column="1" Style="{StaticResource ButtonStyle}" FontFamily="{StaticResource OpenSansBold}" HorizontalAlignment="Stretch" Margin="15,10,15,10" ClickMode="Press">Send</Button>
 		</Grid>
 		<ScrollViewer>
 			<TextBlock x:Name="TextBlock_Output" FontFamily="{StaticResource OpenSansRegular}" Foreground="White" FontSize="24" Margin="10" Text="Console ready">

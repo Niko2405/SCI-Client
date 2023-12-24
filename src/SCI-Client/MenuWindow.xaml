@@ -6,8 +6,8 @@
 		xmlns:local="clr-namespace:SCI_Client"
 		xmlns:UserControl="clr-namespace:SCI_Client.UserControls"
 		mc:Ignorable="d"
-		WindowStyle="ThreeDBorderWindow"
 		WindowStartupLocation="CenterScreen" WindowState="Normal"
+		MinHeight="260" MinWidth="420"
 		Title="Menu" Height="1080" Width="1920">
 	<Window.Background>
 		<ImageBrush ImageSource="{StaticResource ImageBackground}"></ImageBrush>
@@ -15,32 +15,42 @@
 	
 	<DockPanel LastChildFill="True">
 		<DockPanel.Background>
-			<SolidColorBrush Color="Black" Opacity="0.1"></SolidColorBrush>
+			<SolidColorBrush Color="Black" Opacity="0.125"></SolidColorBrush>
 		</DockPanel.Background>
 		
 		<!-- Menu -->
-		<Menu DockPanel.Dock="Top" Style="{StaticResource MenuStyle}">
-			<MenuItem Header="_File" Width="100">
-				<MenuItem Header="_Close" Background="{StaticResource LinearBrushMenu}"></MenuItem>
+		<Menu DockPanel.Dock="Top" Background="Black">
+			<MenuItem Header="_File" Style="{StaticResource MenuItemStyle}" Width="100">
+				<MenuItem Header="_Close"></MenuItem>
 			</MenuItem>
-			<MenuItem Header="_Edit" Width="100">
-				<MenuItem Header="_Load config" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Save config" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Show config" Background="{StaticResource LinearBrushMenu}"></MenuItem>
+			<MenuItem Header="_Edit" Style="{StaticResource MenuItemStyle}" Width="100">
+				<MenuItem Header="_Load config"></MenuItem>
+				<MenuItem Header="_Save config"></MenuItem>
+				<MenuItem Header="_Edit config"></MenuItem>
 			</MenuItem>
-			<MenuItem Header="_Server" Width="100">
-				<MenuItem Header="_Server Console" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Database" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Info Panel" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Maintenance" Background="{StaticResource LinearBrushMenu}"></MenuItem>
+			<MenuItem Header="_Server" Style="{StaticResource MenuItemStyle}" Width="100">
+				<MenuItem Header="_Server Console"></MenuItem>
+				<MenuItem Header="_Database"></MenuItem>
+				<MenuItem Header="_Info Panel"></MenuItem>
+				<MenuItem Header="_Maintenance"></MenuItem>
 			</MenuItem>
-			<MenuItem Header="_Local" Width="100">
-				<MenuItem Header="_Client Console" Background="{StaticResource LinearBrushMenu}"></MenuItem>
-				<MenuItem Header="_Serial Console" Background="{StaticResource LinearBrushMenu}"></MenuItem>
+			<MenuItem Header="_Local" Style="{StaticResource MenuItemStyle}" Width="100">
+				<MenuItem Header="_Client Console"></MenuItem>
+				<MenuItem Header="_Serial Console"></MenuItem>
 			</MenuItem>
 		</Menu>
 		<Grid DockPanel.Dock="Bottom">
-			<UserControl:ServerConsole x:Name="UserControlServerConsole" Visibility="Hidden"></UserControl:ServerConsole>
+			<!-- Menu Edit -->
+			<UserControl:EditConfig x:Name="UserControlEditConfig" Visibility="Visible"/>
+			<!-- Menu Server -->
+			<UserControl:ServerConsole x:Name="UserControlServerConsole" Visibility="Collapsed"/>
+			<UserControl:ServerDatabase x:Name="UserControlServerDatabase" Visibility="Collapsed"/>
+			<UserControl:ServerControl x:Name="UserControlServerControl" Visibility="Collapsed"/>
+			<UserControl:ServerInfo x:Name="UserControlServerInfo" Visibility="Collapsed"/>
+			<UserControl:ServerMaintenance x:Name="UserControlServerMaintenance" Visibility="Collapsed"/>
+			<!-- Menu Local -->
+			<UserControl:ClientConsole x:Name="UserControlClientConsole" Visibility="Collapsed"/>
+			<UserControl:SerialConsole x:Name="UserControlSerialConsole" Visibility="Collapsed"/>
 		</Grid>
 	</DockPanel>
 </Window>
