@@ -20,5 +20,10 @@ namespace SCI_Client
 		{
 			InitializeComponent();
 		}
-	}
+
+		private void MenuItemClose_Click(object sender, RoutedEventArgs e)
+		{
+			System.Environment.Exit(0);
+        }
+    }
 }

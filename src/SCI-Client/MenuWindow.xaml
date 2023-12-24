@@ -21,7 +21,7 @@
 		<!-- Menu -->
 		<Menu DockPanel.Dock="Top" Background="Black">
 			<MenuItem Header="_File" Style="{StaticResource MenuItemStyle}" Width="100">
-				<MenuItem Header="_Close"></MenuItem>
+				<MenuItem x:Name="MenuItemClose" Header="_Close" Click="MenuItemClose_Click"></MenuItem>
 			</MenuItem>
 			<MenuItem Header="_Edit" Style="{StaticResource MenuItemStyle}" Width="100">
 				<MenuItem Header="_Load config"></MenuItem>
@@ -41,10 +41,10 @@
 		</Menu>
 		<Grid DockPanel.Dock="Bottom">
 			<!-- Menu Edit -->
-			<UserControl:EditConfig x:Name="UserControlEditConfig" Visibility="Visible"/>
+			<UserControl:EditConfig x:Name="UserControlEditConfig" Visibility="Collapsed"/>
 			<!-- Menu Server -->
 			<UserControl:ServerConsole x:Name="UserControlServerConsole" Visibility="Collapsed"/>
-			<UserControl:ServerDatabase x:Name="UserControlServerDatabase" Visibility="Collapsed"/>
+			<UserControl:ServerDatabase x:Name="UserControlServerDatabase" Visibility="Visible"/>
 			<UserControl:ServerControl x:Name="UserControlServerControl" Visibility="Collapsed"/>
 			<UserControl:ServerInfo x:Name="UserControlServerInfo" Visibility="Collapsed"/>
 			<UserControl:ServerMaintenance x:Name="UserControlServerMaintenance" Visibility="Collapsed"/>
