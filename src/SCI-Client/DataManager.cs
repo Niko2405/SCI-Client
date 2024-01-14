@@ -10,31 +10,31 @@ namespace SCI_Client
 	/// <summary>
 	/// Main manager to store datas and write into a config file
 	/// </summary>
-    class DataManager
-    {
-        private static string _serverIP = "127.0.0.1";
-        private static int _serverPort = 8080;
-        private static string _username = "user";
-        private static string _password = "user";
+	class DataManager
+	{
+		private static string _serverIP = "127.0.0.1";
+		private static int _serverPort = 8080;
+		private static string _username = "user";
+		private static string _password = "user";
 
 		/// <summary>
 		/// Server Address
 		/// </summary>
-        public static string ServerIP
-        {
-            get
-            {
-                return _serverIP;
-            }
-            set
-            {
-                _serverIP = value;
-            }
-        }
+		public static string ServerIP
+		{
+			get
+			{
+				return _serverIP;
+			}
+			set
+			{
+				_serverIP = value;
+			}
+		}
 		/// <summary>
 		/// Server Port
 		/// </summary>
-        public static int ServerPort
+		public static int ServerPort
 		{
 			get
 			{

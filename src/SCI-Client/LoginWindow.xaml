@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SCI_Client"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+		WindowState="Maximized"
+		WindowStyle="None"
+        Title="LoginWindow" Height="1080" Width="1920">
 	<DockPanel>
 		<Label DockPanel.Dock="Top" FontSize="28" FontFamily="{StaticResource OpenSansBold}" HorizontalAlignment="Center">Login</Label>
 		<Grid>
@@ -37,9 +39,9 @@
 			<TextBox x:Name="TextBoxServerPort" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">8080</TextBox>
 
 			<Label Grid.Row="1" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Username:</Label>
-			<TextBox x:Name="TextBoxUsername" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">user</TextBox>
+			<TextBox x:Name="TextBoxUsername" Grid.Row="1" Grid.Column="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">root</TextBox>
 			<Label Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Password:</Label>
-			<PasswordBox x:Name="PasswordBoxPassword" Grid.Row="2" Grid.Column="3" PasswordChar="#" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></PasswordBox>
+			<PasswordBox x:Name="PasswordBoxPassword" Grid.Row="2" Grid.Column="3" PasswordChar="#" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Password="Olaf123"></PasswordBox>
 
 			<Button x:Name="ButtonLogin" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" Click="ButtonLogin_Click">Login</Button>
 		</Grid>

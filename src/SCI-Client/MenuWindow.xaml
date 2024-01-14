@@ -43,8 +43,8 @@
 			<!-- Menu Edit -->
 			<UserControl:EditConfig x:Name="UserControlEditConfig" Visibility="Collapsed"/>
 			<!-- Menu Server -->
-			<UserControl:ServerConsole x:Name="UserControlServerConsole" Visibility="Collapsed"/>
-			<UserControl:ServerDatabase x:Name="UserControlServerDatabase" Visibility="Visible"/>
+			<UserControl:ServerConsole x:Name="UserControlServerConsole" Visibility="Visible"/>
+			<UserControl:ServerDatabase x:Name="UserControlServerDatabase" Visibility="Collapsed"/>
 			<UserControl:ServerControl x:Name="UserControlServerControl" Visibility="Collapsed"/>
 			<UserControl:ServerInfo x:Name="UserControlServerInfo" Visibility="Collapsed"/>
 			<UserControl:ServerMaintenance x:Name="UserControlServerMaintenance" Visibility="Collapsed"/>

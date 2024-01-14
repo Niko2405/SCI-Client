@@ -36,13 +36,14 @@ namespace SCI_Client
             string response = client.SendData($"database login profile: {DataManager.Username} {DataManager.Password}");
             if (response == "database: ok")
             {
-                MenuWindow menu = new MenuWindow();
-                menu.Show();
-                this.Close();
-            }
+				MenuWindow menu = new MenuWindow();
+				menu.Show();
+				this.Close();
+			}
             else
             {
-                MessageBox.Show("Login incorrect", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+				
+				MessageBox.Show("Login incorrect", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 		}
 	}

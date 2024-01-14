@@ -25,8 +25,9 @@ namespace SCI_Client.UserControls
 			InitializeComponent();
 			List<DatabaseUsers> users = new List<DatabaseUsers>();
 
+			return;
 			ClientSocket client = new ClientSocket("127.0.0.1", 8080);
-			string response = client.SendData("database get profile: root").Replace("\r", "");
+			string response = client.SendData("database get profiles").Replace("\r", "");
 			string[] data = response.Split("\n");
 			users.Add(new DatabaseUsers() { Id = Convert.ToInt16(data[0]), Username = data[1], Password = data[2], Permission = data[3], Birthday = data[4], Country = data[5], State = data[6], Age = Convert.ToInt32(data[7]), Locked = Convert.ToInt32(data[8])});
 			DataGridUsers.ItemsSource = users;

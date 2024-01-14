@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SCI-Client": {
+      "commandName": "Project"
+    },
+    "Login Skip": {
+      "commandName": "Project",
+      "commandLineArgs": "--skipLogin"
+    }
+  }
+}
