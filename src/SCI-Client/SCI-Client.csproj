@@ -5,8 +5,8 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>SCI_Client</RootNamespace>
     <Nullable>enable</Nullable>
-    <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
   </PropertyGroup>
 
 </Project>
