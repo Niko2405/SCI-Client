@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:SCI_Client"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
-    </Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/DictionaryGraphics.xaml"/>
+				<ResourceDictionary Source="/DictionaryGeneric.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
 </Application>
